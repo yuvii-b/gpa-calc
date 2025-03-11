@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU-GPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Anna University GPA Calculator</h1>
+    <div class="container">
+        <h2>SGPA Calculator</h2>
+        <form id="sgpaForm">
+            <div class="input-group" id="subjects-container">
+                <div class="subject-group">
+                    <label for="subject1">Subject 1:</label>
+                    <label for="grade">Grade: </label>
+                    <select id="subject1" class="subject grade">
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                    </select>
+                    <label for="credits1">Credits:</label>
+                    <input type="number" id="credits1" class="credits" min="1">
+                    <span class="remove-icon" onclick="removeSubject(this)">❌</span>
+                </div>
+                <div class="subject-group">
+                    <label for="subject2">Subject 2:</label>
+                    <label for="grade">Grade: </label>
+                    <select id="subject2" class="subject grade">
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                    </select>
+                    <label for="credits2">Credits:</label>
+                    <input type="number" id="credits2" class="credits" min="1">
+                    <span class="remove-icon" onclick="removeSubject(this)">❌</span>
+                </div>
+                <div class="subject-group">
+                    <label for="subject3">Subject 3:</label>
+                    <label for="grade">Grade: </label>
+                    <select id="subject3" class="subject grade">
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                    </select>
+                    <label for="credits3">Credits:</label>
+                    <input type="number" id="credits3" class="credits" min="1">
+                    <span class="remove-icon" onclick="removeSubject(this)">❌</span>
+                </div>
+            </div>
+            <button type="button" onclick="addSubject()">Add Subject</button>
+            <button type="button" onclick="calculateSGPA()">Calculate SGPA</button>
+        </form>     
+        <h3 id="result"></h3>
+    </div>
+    <br><button type="button" onclick="resetSGPA()">Reset</button>
+    <script src="sgpa.js"></script>
+</body>
+</html>
